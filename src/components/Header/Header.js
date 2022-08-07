@@ -1,43 +1,25 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
-import {
-  AppBar,
-  Typography,
-  Toolbar,
-  makeStyles,
-  Grid
-} from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Grid } from '@mui/material';
 import HeaderButton from './components/HeaderButton';
 
-const userStyles = makeStyles({
-  container: {
-    background:
-      'linear-gradient(90.07deg, rgba(7, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%)',
-    backdropFilter: 'blur(4px)',
-    borderBottom: '1px solid #9BA3EB',
-    borderRadius: '0px 0px 20px 20px'
-  },
-  buttonContainer: {
-    display: 'flex',
-    justifyContent: 'flex-end'
-  },
-  button: {
-    backgroundColor: '#fff'
-  }
-});
-
 function Header(props) {
-  const styles = userStyles();
   return (
-    <AppBar className={styles.container}>
+    <AppBar
+      sx={{
+        background: 'rgba( 255, 255, 255, 0.1 )',
+        backdropFilter: 'blur(4px)',
+        borderBottom: '1px solid #9BA3EB',
+        borderRadius: '0px 0px 20px 20px'
+      }}>
       <Toolbar>
         <Grid container alignItems="center">
           <Grid item xs={6} sm={4} md={3}>
-            <Typography variant="h5" color="primary">
+            <Typography variant="h5" color="common.white">
               Savitar Portfolio
             </Typography>
           </Grid>
           <Grid
+            item
             container
             justifyContent="flex-end"
             xs={6}

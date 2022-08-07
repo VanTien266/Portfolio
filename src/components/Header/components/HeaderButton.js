@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/styles';
+import { Button, Typography } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 
 const userStyles = makeStyles({
   container: {}
