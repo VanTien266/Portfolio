@@ -10,10 +10,11 @@ function BodyCard(props) {
         boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
         border: '1px solid #9BA3EB',
         borderRadius: '20px',
-        minHeight: '75vh',
+        height: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        overflow: 'hidden'
       }}>
       {props.children}
     </Card>

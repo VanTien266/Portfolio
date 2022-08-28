@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/about" />
+    component: () => <Redirect to="/contact" />
   },
   {
     path: '/about',

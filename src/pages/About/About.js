@@ -4,8 +4,9 @@ import Header from '../../components/Header';
 import bgImage from '../../assets/img/background.jpg';
 import BodyCard from '../../components/BodyCard';
 import { Grid, IconButton } from '@mui/material';
-import Intro from './components/Intro';
+import { Intro } from './components';
 import { West, East } from '@mui/icons-material';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   background: {
@@ -19,6 +20,7 @@ const useStyles = makeStyles({
 
 function About() {
   const styles = useStyles();
+  const history = useHistory();
   return (
     <div className={styles.background}>
       <Header />
@@ -29,7 +31,7 @@ function About() {
         alignItems="center"
         columnSpacing={2}>
         <Grid item xs={1} sx={{ textAlign: 'center', color: 'white' }}>
-          <IconButton color="inherit">
+          <IconButton color="inherit" onClick={() => history.push('/contact')}>
             <West fontSize="large" />
           </IconButton>
         </Grid>
@@ -39,7 +41,7 @@ function About() {
           </BodyCard>
         </Grid>
         <Grid item xs={1} sx={{ textAlign: 'center', color: 'white' }}>
-          <IconButton color="inherit">
+          <IconButton color="inherit" onClick={() => history.push('/product')}>
             <East fontSize="large" />
           </IconButton>
         </Grid>

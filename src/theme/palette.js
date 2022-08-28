@@ -10,8 +10,8 @@ export default {
     contrastText: '#DBDFFD'
   },
   secondary: {
-    light: '#ff7961',
-    main: '#f44336',
+    light: '#02E840',
+    main: '#E8BD25',
     dark: '#ba000d',
     contrastText: '#000'
   },
