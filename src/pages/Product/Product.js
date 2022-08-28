@@ -7,6 +7,9 @@ import { Grid, IconButton } from '@mui/material';
 import { West, East } from '@mui/icons-material';
 import { ProductList } from './components';
 import { useHistory } from 'react-router-dom';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import productApi from '../../apis/product.api';
 
 const useStyles = makeStyles({
   background: {
@@ -21,6 +24,27 @@ const useStyles = makeStyles({
 function Product() {
   const styles = useStyles();
   const history = useHistory();
+  const [productList, setProductList] = useState([]);
+  const [error, setError] = useState(null);
+  useEffect(() => {
+    let mounted = true;
+    if (mounted) {
+      fetchProductList();
+    }
+    return () => (mounted = false);
+  }, []);
+
+  const fetchProductList = async () => {
+    try {
+      const resp = await productApi.getAll();
+      console.log(resp);
+      setProductList(resp);
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    }
+  };
+
   return (
     <div className={styles.background}>
       <Header />
@@ -35,9 +59,9 @@ function Product() {
             <West fontSize="large" />
           </IconButton>
         </Grid>
-        <Grid item xs={10} sx={{ height: '75vh' }}>
+        <Grid item xs={10}>
           <BodyCard>
-            <ProductList />
+            <ProductList productList={productList} />
           </BodyCard>
         </Grid>
         <Grid item xs={1} sx={{ textAlign: 'center', color: 'white' }}>

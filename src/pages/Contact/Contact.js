@@ -35,7 +35,7 @@ function Contact() {
             <West fontSize="large" />
           </IconButton>
         </Grid>
-        <Grid item xs={10} sx={{ height: '75vh' }}>
+        <Grid item xs={10}>
           <BodyCard>
             <ContactBody />
           </BodyCard>

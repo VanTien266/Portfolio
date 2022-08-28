@@ -7,6 +7,7 @@ import { Router } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import routes from './router';
 import theme from './theme';
+import './mock';
 
 const history = createBrowserHistory();
 

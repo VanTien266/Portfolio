@@ -35,7 +35,7 @@ function About() {
             <West fontSize="large" />
           </IconButton>
         </Grid>
-        <Grid item xs={10} sx={{ minHeight: '75vh' }}>
+        <Grid item xs={10}>
           <BodyCard>
             <Intro />
           </BodyCard>

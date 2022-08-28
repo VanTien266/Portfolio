@@ -10,7 +10,7 @@ function BodyCard(props) {
         boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
         border: '1px solid #9BA3EB',
         borderRadius: '20px',
-        height: '100%',
+        height: '75vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

@@ -29,17 +29,32 @@ function ContactBody() {
         </Grid>
         <Grid item container justifyContent="center" alignItems="center">
           <Grid item>
-            <IconButton variant="contained" color="secondary">
+            <IconButton
+              variant="contained"
+              color="secondary"
+              onClick={() =>
+                window.open('https://www.facebook.com/tiencot.2006/', '_blank')
+              }>
               <Avatar src={facebook} />
             </IconButton>
           </Grid>
           <Grid item>
-            <IconButton variant="contained" color="secondary">
+            <IconButton
+              variant="contained"
+              color="secondary"
+              onClick={() =>
+                window.open('https://www.instagram.com/tiencot206/', '_blank')
+              }>
               <Avatar src={instagram} />
             </IconButton>
           </Grid>
           <Grid item>
-            <IconButton variant="contained" color="secondary">
+            <IconButton
+              variant="contained"
+              color="secondary"
+              onClick={() =>
+                window.open('https://www.linkedin.com/in/luuvantien/', '_blank')
+              }>
               <Avatar src={linkedin} />
             </IconButton>
           </Grid>

@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar, Typography, Toolbar, Grid } from '@mui/material';
 import HeaderButton from './components/HeaderButton';
+import { useLocation } from 'react-router-dom';
+import { makeStyles } from '@mui/styles';
 
+const userStyles = makeStyles({
+  activeButton: {
+    textDecoration: 'underline'
+  }
+});
 function Header(props) {
+  const styles = userStyles();
+  const [currentRoute, setCurrentRoute] = useState(useLocation().pathname);
+
   return (
     <AppBar
       sx={{
@@ -15,7 +25,7 @@ function Header(props) {
         <Grid container alignItems="center">
           <Grid item xs={6} sm={4} md={3}>
             <Typography variant="h5" color="common.white">
-              Savitar Portfolio
+              Savitar&apos;s Portfolio
             </Typography>
           </Grid>
           <Grid
@@ -27,13 +37,31 @@ function Header(props) {
             md={9}
             spacing={2}>
             <Grid item>
-              <HeaderButton label="About" />
+              <HeaderButton
+                label="About"
+                routeName="about"
+                activeStyle={
+                  currentRoute === '/about' ? styles.activeButton : null
+                }
+              />
             </Grid>
             <Grid item>
-              <HeaderButton label="Products" />
+              <HeaderButton
+                label="Products"
+                routeName="product"
+                activeStyle={
+                  currentRoute === '/product' ? styles.activeButton : null
+                }
+              />
             </Grid>
             <Grid item>
-              <HeaderButton label="Contact" />
+              <HeaderButton
+                label="Contact"
+                routeName="contact"
+                activeStyle={
+                  currentRoute === '/contact' ? styles.activeButton : null
+                }
+              />
             </Grid>
           </Grid>
         </Grid>
