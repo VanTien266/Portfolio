@@ -13,7 +13,7 @@ function Intro() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        m: { xs: 2, sm: 4, md: 6, lg: 8 }
+        m: { xs: 2, sm: 4, md: 6, lg: 8 },
       }}>
       <Grid container direction="row-reverse">
         <Grid item xs={12} sm={4}>

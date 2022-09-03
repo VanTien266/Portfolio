@@ -1,3 +1,3 @@
 export default {
-  fontFamily: ['Inter'].join(',')
+  fontFamily: ['Inter'].join(','),
 };

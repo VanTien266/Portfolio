@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { AppBar, Typography, Toolbar, Grid } from '@mui/material';
-import HeaderButton from './components/HeaderButton';
 import { useLocation } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
+import PropTypes from 'prop-types';
+import HeaderButton from './components/HeaderButton';
 
 const userStyles = makeStyles({
   activeButton: {
-    textDecoration: 'underline'
-  }
+    textDecoration: 'underline',
+  },
 });
-function Header(props) {
+function Header() {
   const styles = userStyles();
   const [currentRoute, setCurrentRoute] = useState(useLocation().pathname);
 
@@ -19,7 +20,7 @@ function Header(props) {
         background: 'rgba( 255, 255, 255, 0.1 )',
         backdropFilter: 'blur(4px)',
         borderBottom: '1px solid #9BA3EB',
-        borderRadius: '0px 0px 20px 20px'
+        borderRadius: '0px 0px 20px 20px',
       }}>
       <Toolbar>
         <Grid container alignItems="center">

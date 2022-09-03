@@ -7,15 +7,15 @@ export default {
     light: '#9BA3EB',
     main: '#646FD4',
     dark: '#242F9B',
-    contrastText: '#DBDFFD'
+    contrastText: '#DBDFFD',
   },
   secondary: {
     light: '#02E840',
     main: '#E8BD25',
     dark: '#ba000d',
-    contrastText: '#000'
+    contrastText: '#000',
   },
   text: {
-    primary: '#fff'
-  }
+    primary: '#fff',
+  },
 };

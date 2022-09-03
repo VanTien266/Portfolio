@@ -2,11 +2,12 @@ import axios from 'axios';
 import qs from 'qs';
 
 const axiosClient = axios.create({
+  // eslint-disable-next-line no-undef
   baseURL: process.env.REACT_APP_API_URL,
   headers: {
-    'content-type': 'application/json'
+    'content-type': 'application/json',
   },
-  paramsSerializer: params => qs.stringify(params)
+  paramsSerializer: params => qs.stringify(params),
 });
 axiosClient.interceptors.request.use(async config => {
   // Handle token here ...
@@ -19,8 +20,8 @@ axiosClient.interceptors.request.use(async config => {
     ...config,
     headers: {
       ...customHeaders, // auto attach token
-      ...config.headers // but you can override for some requests
-    }
+      ...config.headers, // but you can override for some requests
+    },
   };
 });
 axiosClient.interceptors.response.use(
@@ -33,6 +34,6 @@ axiosClient.interceptors.response.use(
   error => {
     // Handle errors
     throw error;
-  }
+  },
 );
 export default axiosClient;

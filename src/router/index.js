@@ -8,23 +8,23 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/contact" />
+    component: () => <Redirect to="/contact" />,
   },
   {
     path: '/about',
     exact: true,
-    component: About
+    component: About,
   },
   {
     path: '/product',
     exact: true,
-    component: Product
+    component: Product,
   },
   {
     path: '/contact',
     exact: true,
-    component: Contact
-  }
+    component: Contact,
+  },
 ];
 
 export default routes;

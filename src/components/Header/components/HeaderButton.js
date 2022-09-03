@@ -8,9 +8,9 @@ import clsx from 'clsx';
 const userStyles = makeStyles({
   container: {
     '&:hover': {
-      textDecoration: 'underline'
-    }
-  }
+      textDecoration: 'underline',
+    },
+  },
 });
 
 function HeaderButton(props) {
@@ -29,7 +29,8 @@ function HeaderButton(props) {
 }
 
 Button.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string.isRequired,
+  routeName: PropTypes.string,
 };
 
 export default HeaderButton;

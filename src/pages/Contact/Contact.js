@@ -1,12 +1,12 @@
 import { makeStyles } from '@mui/styles';
 import React from 'react';
+import { Grid, IconButton } from '@mui/material';
+import { West, East } from '@mui/icons-material';
+import { useHistory } from 'react-router-dom';
 import Header from '../../components/Header';
 import bgImage from '../../assets/img/background.jpg';
 import BodyCard from '../../components/BodyCard';
-import { Grid, IconButton } from '@mui/material';
-import { West, East } from '@mui/icons-material';
 import { ContactBody } from './components';
-import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
   background: {
@@ -14,8 +14,8 @@ const useStyles = makeStyles({
     height: '100%',
     backgroundImage: `url(${bgImage})`,
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '100% 100%'
-  }
+    backgroundSize: '100% 100%',
+  },
 });
 
 function Contact() {

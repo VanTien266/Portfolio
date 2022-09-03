@@ -6,7 +6,7 @@ import {
   Button,
   Avatar,
   InputAdornment,
-  InputLabel
+  InputLabel,
 } from '@mui/material';
 import React from 'react';
 import { AccountCircle, Send, Email } from '@mui/icons-material';
@@ -70,11 +70,10 @@ function ContactBody() {
           initialValues={{
             firstName: '',
             lastName: '',
-            email: ''
+            email: '',
           }}
-          onSubmit={async values => {
-            await new Promise(r => setTimeout(r, 500));
-            alert(JSON.stringify(values, null, 2));
+          onSubmit={() => {
+            return null;
           }}>
           <Form>
             <Grid
@@ -93,7 +92,7 @@ function ContactBody() {
                       <InputAdornment position="start">
                         <AccountCircle sx={{ color: 'white' }} />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                   placeholder="Your name"
                 />
@@ -109,7 +108,7 @@ function ContactBody() {
                       <InputAdornment position="start">
                         <Email sx={{ color: 'white' }} />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                 />
               </Grid>

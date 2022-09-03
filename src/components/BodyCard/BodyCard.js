@@ -2,6 +2,7 @@ import React from 'react';
 import { Card } from '@mui/material';
 
 function BodyCard(props) {
+  const { children } = props;
   return (
     <Card
       sx={{
@@ -14,9 +15,9 @@ function BodyCard(props) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }}>
-      {props.children}
+      {children}
     </Card>
   );
 }

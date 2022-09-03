@@ -4,7 +4,7 @@ import {
   CardMedia,
   Typography,
   Grid,
-  Box
+  Box,
 } from '@mui/material';
 import React from 'react';
 import fabricrollweb from '../../../assets/img/fabricrollweb.PNG';
@@ -15,7 +15,7 @@ function ProductCard() {
       sx={{
         width: '100%',
         height: '100%',
-        transition: 'linear 2s'
+        transition: 'linear 2s',
       }}>
       <Card
         sx={{
@@ -23,8 +23,8 @@ function ProductCard() {
           height: '100%',
           '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: '8px 8px 23px -5px rgba(0,0,0,0.67)'
-          }
+            boxShadow: '8px 8px 23px -5px rgba(0,0,0,0.67)',
+          },
         }}>
         <Box sx={{}}>
           <CardMedia component="img" image={fabricrollweb} />
